@@ -1,0 +1,13 @@
+../Core/Src/main.c:87:20:enqueue_button_event	24	static
+../Core/Src/main.c:97:6:check_packet	24	static
+../Core/Src/main.c:104:6:HAL_UART_RxCpltCallback	24	static
+../Core/Src/main.c:153:6:process_packet	24	static,ignoring_inline_asm
+../Core/Src/main.c:176:6:process_button_events	16	static
+../Core/Src/main.c:196:6:print_pots	32	static
+../Core/Src/main.c:202:5:_write	32	static
+../Core/Src/main.c:220:5:main	8	static
+../Core/Src/main.c:273:6:SystemClock_Config	88	static
+../Core/Src/main.c:328:13:MX_UART4_Init	8	static
+../Core/Src/main.c:361:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:394:13:MX_GPIO_Init	16	static
+../Core/Src/main.c:416:6:Error_Handler	4	static,ignoring_inline_asm

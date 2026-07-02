@@ -1,0 +1,48 @@
+../Core/Inc/bno055_stm32.h:19:6:void bno055_assignI2C(I2C_HandleTypeDef*)	1
+../Core/Inc/bno055_stm32.h:23:6:void bno055_delay(int)	1
+../Core/Inc/bno055_stm32.h:31:6:void bno055_writeData(uint8_t, uint8_t)	23
+../Core/Inc/bno055_stm32.h:95:6:void bno055_readData(uint8_t, uint8_t*, uint8_t)	1
+../Core/Src/main.cpp:95:9:int16_t PID(float)	3
+../Core/Src/main.cpp:171:9:int16_t encPID(float)	3
+../Core/Src/main.cpp:186:20:void enqueue_button_event(uint16_t)	2
+../Core/Src/main.cpp:196:6:bool check_packet(uint8_t*)	4
+../Core/Src/main.cpp:203:6:void HAL_GPIO_EXTI_Callback(uint16_t)	5
+../Core/Src/main.cpp:223:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	7
+../Core/Src/main.cpp:265:6:void MDDS60_SendPacket(uint8_t, int8_t)	1
+../Core/Src/main.cpp:279:6:void MDDS60_Autobaud()	1
+../Core/Src/main.cpp:288:6:void MDDS60_StopAll()	1
+../Core/Src/main.cpp:294:6:void process_packet()	3
+../Core/Src/main.cpp:319:6:void print_pots()	1
+../Core/Src/main.cpp:325:16:int _write(int, char*, int)	4
+../Core/Src/main.cpp:341:6:void inv_kin(float, float, float)	4
+../Core/Src/main.cpp:388:6:void motor_test()	1
+../Core/Src/main.cpp:395:6:void PotDeadzone()	9
+../Core/Src/main.cpp:403:6:void ModeSet()	5
+../Core/Src/main.cpp:422:6:void FOD(float, float*, float*)	1
+../Core/Src/main.cpp:433:6:void colorSet(int)	5
+../Core/Src/main.cpp:461:6:void StaffPickingLeadscrew()	4
+../Core/Src/main.cpp:475:6:void PowerWindowRotation()	5
+../Core/Src/main.cpp:502:6:void gripperRotation()	2
+../Core/Src/main.cpp:513:6:void KFSPicking()	4
+../Core/Src/main.cpp:533:6:void KFShold()	5
+../Core/Src/main.cpp:562:6:void KFSLeadscrewVert()	4
+../Core/Src/main.cpp:579:6:void KFSLeadscrewHori()	5
+../Core/Src/main.cpp:602:6:void StaffPickingLeadscrewPID()	2
+../Core/Src/main.cpp:614:6:void ServoControl()	5
+../Core/Src/main.cpp:650:6:void process_button_events()	28
+../Core/Src/main.cpp:780:5:int main()	3
+../Core/Src/main.cpp:899:6:void SystemClock_Config()	3
+../Core/Src/main.cpp:947:13:void MX_I2C1_Init()	2
+../Core/Src/main.cpp:981:13:void MX_TIM1_Init()	8
+../Core/Src/main.cpp:1058:13:void MX_TIM2_Init()	6
+../Core/Src/main.cpp:1117:13:void MX_UART4_Init()	2
+../Core/Src/main.cpp:1150:13:void MX_USART1_UART_Init()	2
+../Core/Src/main.cpp:1183:13:void MX_USART2_UART_Init()	2
+../Core/Src/main.cpp:1216:13:void MX_USART3_UART_Init()	2
+../Core/Src/main.cpp:1249:13:void MX_USART6_UART_Init()	2
+../Core/Src/main.cpp:1282:13:void MX_GPIO_Init()	1
+../Core/Src/main.cpp:1351:6:void Error_Handler()	1
+../Core/Src/main.cpp:1360:1:void __static_initialization_and_destruction_0()	1
+../Core/Src/main.cpp:1360:1:void __static_initialization_and_destruction_1()	1
+../Core/Src/main.cpp:1360:1:cpp)	1
+../Core/Src/main.cpp:1360:1:cpp)	1
