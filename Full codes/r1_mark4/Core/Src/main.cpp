@@ -489,7 +489,7 @@ void PowerWindowRotation(){
 
 		else if(CCW){
 			//printf("moving ccw\r\n");
-			MDDS60_SendPacket(powerwindow, -20);
+			MDDS60_SendPacket(powerwindow, 20);
 		}
 
 		else{

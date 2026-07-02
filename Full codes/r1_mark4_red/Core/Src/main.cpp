@@ -84,7 +84,7 @@ int target=0;
 float error= 0;
 float preverror=0;
 float P=10;
-float I=0.0005;
+float I=0;
 float D=50;
 float intg;
 
@@ -94,8 +94,8 @@ int16_t maxspeed = 32000;
 
 int16_t PID(float angz){
 	error=target-angz;
-	intg += error*I;
-	int16_t output = (error*P)+intg+((error-preverror)*D);
+	intg += error;
+	int16_t output = (error*P)+(intg*I)+((error-preverror)*D);
 	if(output>100) output = 100;
 	if(output<-100) output = -100;
 	preverror=error;
@@ -345,8 +345,8 @@ void inv_kin(float x, float y, float z){
 	}
 
 	else if(mode==4){
-		x=-x*0.69;
-		y=-y*0.69;
+		x=-x*0.80;
+		y=-y*0.80;
 	}
 	else{
 		x=-x*0.5;
@@ -478,7 +478,7 @@ void PowerWindowRotation(){
 			//printf("moving cw\r\n");
 			// red side pwm = 20 for blue side pwm  = -20
 			int bump = HAL_GPIO_ReadPin(BUMP2_GPIO_Port, BUMP2_Pin);
-			if(bump!=1){
+			if(bump!=0){
 				MDDS60_SendPacket(powerwindow, 20);
 			}
 			else{
@@ -689,9 +689,9 @@ void process_button_events(void)
 			//printf("Triangle\r\n");
 			if(mode==1){
 				target+=(sign*45);
-				P = 5;
+				P = 4;
 				I = 0.0005;
-				D = 90;
+				D = 75;
 			}
 
 			else if(mode==2){

@@ -9,43 +9,43 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   2 .rodata       000006f4  08009a78  08009a78  0000aa78  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  0800a16c  0800a16c  0000c088  2**0
+  3 .ARM.extab    00000000  0800a16c  0800a16c  0000c084  2**0
                   CONTENTS, READONLY
   4 .ARM          00000008  0800a16c  0800a16c  0000b16c  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  0800a174  0800a174  0000c088  2**0
+  5 .preinit_array 00000000  0800a174  0800a174  0000c084  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   6 .init_array   00000008  0800a174  0800a174  0000b174  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   7 .fini_array   00000008  0800a17c  0800a17c  0000b17c  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  8 .data         00000088  20000000  0800a184  0000c000  2**2
+  8 .data         00000084  20000000  0800a184  0000c000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00000450  20000088  0800a20c  0000c088  2**2
+  9 .bss          00000454  20000084  0800a208  0000c084  2**2
                   ALLOC
- 10 ._user_heap_stack 00000600  200004d8  0800a20c  0000c4d8  2**0
+ 10 ._user_heap_stack 00000600  200004d8  0800a208  0000c4d8  2**0
                   ALLOC
- 11 .ARM.attributes 00000030  00000000  00000000  0000c088  2**0
+ 11 .ARM.attributes 00000030  00000000  00000000  0000c084  2**0
                   CONTENTS, READONLY
- 12 .debug_info   000147cd  00000000  00000000  0000c0b8  2**0
+ 12 .debug_info   000147cd  00000000  00000000  0000c0b4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00002cdf  00000000  00000000  00020885  2**0
+ 13 .debug_abbrev 00002cdf  00000000  00000000  00020881  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00001340  00000000  00000000  00023568  2**3
+ 14 .debug_aranges 00001340  00000000  00000000  00023560  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_rnglists 00000f4e  00000000  00000000  000248a8  2**0
+ 15 .debug_rnglists 00000f4e  00000000  00000000  000248a0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0002744c  00000000  00000000  000257f6  2**0
+ 16 .debug_macro  0002744c  00000000  00000000  000257ee  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00016763  00000000  00000000  0004cc42  2**0
+ 17 .debug_line   00016761  00000000  00000000  0004cc3a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000dbe37  00000000  00000000  000633a5  2**0
+ 18 .debug_str    000dbe37  00000000  00000000  0006339b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  0013f1dc  2**0
+ 19 .comment      00000043  00000000  00000000  0013f1d2  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00005dc4  00000000  00000000  0013f220  2**2
+ 20 .debug_frame  00005dc4  00000000  00000000  0013f218  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000073  00000000  00000000  00144fe4  2**0
+ 21 .debug_line_str 00000073  00000000  00000000  00144fdc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -62,7 +62,7 @@ Disassembly of section .text:
  80001e2:	2301      	movs	r3, #1
  80001e4:	7023      	strb	r3, [r4, #0]
  80001e6:	bd10      	pop	{r4, pc}
- 80001e8:	20000088 	.word	0x20000088
+ 80001e8:	20000084 	.word	0x20000084
  80001ec:	00000000 	.word	0x00000000
  80001f0:	08009a60 	.word	0x08009a60
 
@@ -75,7 +75,7 @@ Disassembly of section .text:
  80001fe:	f3af 8000 	nop.w
  8000202:	bd08      	pop	{r3, pc}
  8000204:	00000000 	.word	0x00000000
- 8000208:	2000008c 	.word	0x2000008c
+ 8000208:	20000088 	.word	0x20000088
  800020c:	08009a60 	.word	0x08009a60
 
 08000210 <memchr>:
@@ -1717,8 +1717,8 @@ float bno055_getHeadingContinuous(void)
  800133c:	46bd      	mov	sp, r7
  800133e:	bd80      	pop	{r7, pc}
  8001340:	2000000a 	.word	0x2000000a
- 8001344:	200000a4 	.word	0x200000a4
- 8001348:	200000a8 	.word	0x200000a8
+ 8001344:	200000a0 	.word	0x200000a0
+ 8001348:	200000a4 	.word	0x200000a4
  800134c:	43340000 	.word	0x43340000
  8001350:	43b40000 	.word	0x43b40000
  8001354:	c3340000 	.word	0xc3340000
@@ -1811,7 +1811,7 @@ void bno055_assignI2C(I2C_HandleTypeDef *hi2c_device) {
  80013d8:	f85d 7b04 	ldr.w	r7, [sp], #4
  80013dc:	4770      	bx	lr
  80013de:	bf00      	nop
- 80013e0:	200000ac 	.word	0x200000ac
+ 80013e0:	200000a8 	.word	0x200000a8
 
 080013e4 <bno055_delay>:
 
@@ -2069,7 +2069,7 @@ void bno055_writeData(uint8_t reg, uint8_t data) {
  800157a:	3718      	adds	r7, #24
  800157c:	46bd      	mov	sp, r7
  800157e:	bd80      	pop	{r7, pc}
- 8001580:	200000ac 	.word	0x200000ac
+ 8001580:	200000a8 	.word	0x200000a8
  8001584:	08009ab4 	.word	0x08009ab4
  8001588:	08009ad8 	.word	0x08009ad8
  800158c:	08009b00 	.word	0x08009b00
@@ -2131,7 +2131,7 @@ void bno055_readData(uint8_t reg, uint8_t *data, uint8_t len) {
  800160e:	46bd      	mov	sp, r7
  8001610:	bd80      	pop	{r7, pc}
  8001612:	bf00      	nop
- 8001614:	200000ac 	.word	0x200000ac
+ 8001614:	200000a8 	.word	0x200000a8
 
 08001618 <_Z3PIDf>:
 
@@ -2153,25 +2153,25 @@ int16_t PID(float angz){
  8001632:	ee77 7a67 	vsub.f32	s15, s14, s15
  8001636:	4b28      	ldr	r3, [pc, #160]	@ (80016d8 <_Z3PIDf+0xc0>)
  8001638:	edc3 7a00 	vstr	s15, [r3]
-	intg += error*I;
- 800163c:	4b26      	ldr	r3, [pc, #152]	@ (80016d8 <_Z3PIDf+0xc0>)
+	intg += error;
+ 800163c:	4b27      	ldr	r3, [pc, #156]	@ (80016dc <_Z3PIDf+0xc4>)
  800163e:	ed93 7a00 	vldr	s14, [r3]
- 8001642:	4b26      	ldr	r3, [pc, #152]	@ (80016dc <_Z3PIDf+0xc4>)
+ 8001642:	4b25      	ldr	r3, [pc, #148]	@ (80016d8 <_Z3PIDf+0xc0>)
  8001644:	edd3 7a00 	vldr	s15, [r3]
- 8001648:	ee27 7a27 	vmul.f32	s14, s14, s15
- 800164c:	4b24      	ldr	r3, [pc, #144]	@ (80016e0 <_Z3PIDf+0xc8>)
- 800164e:	edd3 7a00 	vldr	s15, [r3]
- 8001652:	ee77 7a27 	vadd.f32	s15, s14, s15
- 8001656:	4b22      	ldr	r3, [pc, #136]	@ (80016e0 <_Z3PIDf+0xc8>)
- 8001658:	edc3 7a00 	vstr	s15, [r3]
-	int16_t output = (error*P)+intg+((error-preverror)*D);
- 800165c:	4b1e      	ldr	r3, [pc, #120]	@ (80016d8 <_Z3PIDf+0xc0>)
- 800165e:	ed93 7a00 	vldr	s14, [r3]
- 8001662:	4b20      	ldr	r3, [pc, #128]	@ (80016e4 <_Z3PIDf+0xcc>)
- 8001664:	edd3 7a00 	vldr	s15, [r3]
- 8001668:	ee27 7a27 	vmul.f32	s14, s14, s15
- 800166c:	4b1c      	ldr	r3, [pc, #112]	@ (80016e0 <_Z3PIDf+0xc8>)
- 800166e:	edd3 7a00 	vldr	s15, [r3]
+ 8001648:	ee77 7a27 	vadd.f32	s15, s14, s15
+ 800164c:	4b23      	ldr	r3, [pc, #140]	@ (80016dc <_Z3PIDf+0xc4>)
+ 800164e:	edc3 7a00 	vstr	s15, [r3]
+	int16_t output = (error*P)+(intg*I)+((error-preverror)*D);
+ 8001652:	4b21      	ldr	r3, [pc, #132]	@ (80016d8 <_Z3PIDf+0xc0>)
+ 8001654:	ed93 7a00 	vldr	s14, [r3]
+ 8001658:	4b21      	ldr	r3, [pc, #132]	@ (80016e0 <_Z3PIDf+0xc8>)
+ 800165a:	edd3 7a00 	vldr	s15, [r3]
+ 800165e:	ee27 7a27 	vmul.f32	s14, s14, s15
+ 8001662:	4b1e      	ldr	r3, [pc, #120]	@ (80016dc <_Z3PIDf+0xc4>)
+ 8001664:	edd3 6a00 	vldr	s13, [r3]
+ 8001668:	4b1e      	ldr	r3, [pc, #120]	@ (80016e4 <_Z3PIDf+0xcc>)
+ 800166a:	edd3 7a00 	vldr	s15, [r3]
+ 800166e:	ee66 7aa7 	vmul.f32	s15, s13, s15
  8001672:	ee37 7a27 	vadd.f32	s14, s14, s15
  8001676:	4b18      	ldr	r3, [pc, #96]	@ (80016d8 <_Z3PIDf+0xc0>)
  8001678:	edd3 6a00 	vldr	s13, [r3]
@@ -2212,13 +2212,13 @@ int16_t PID(float angz){
  80016cc:	f85d 7b04 	ldr.w	r7, [sp], #4
  80016d0:	4770      	bx	lr
  80016d2:	bf00      	nop
- 80016d4:	200002fc 	.word	0x200002fc
- 80016d8:	20000300 	.word	0x20000300
- 80016dc:	20000010 	.word	0x20000010
- 80016e0:	20000308 	.word	0x20000308
- 80016e4:	2000000c 	.word	0x2000000c
- 80016e8:	20000304 	.word	0x20000304
- 80016ec:	20000014 	.word	0x20000014
+ 80016d4:	200002f8 	.word	0x200002f8
+ 80016d8:	200002fc 	.word	0x200002fc
+ 80016dc:	20000308 	.word	0x20000308
+ 80016e0:	2000000c 	.word	0x2000000c
+ 80016e4:	20000304 	.word	0x20000304
+ 80016e8:	20000300 	.word	0x20000300
+ 80016ec:	20000010 	.word	0x20000010
 
 080016f0 <_ZL20enqueue_button_eventt>:
 //encoder counts
@@ -2586,7 +2586,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  8001938:	20000317 	.word	0x20000317
  800193c:	2000032e 	.word	0x2000032e
  8001940:	40020000 	.word	0x40020000
- 8001944:	20000194 	.word	0x20000194
+ 8001944:	20000190 	.word	0x20000190
 
 08001948 <_Z17MDDS60_SendPacketha>:
 
@@ -2644,7 +2644,7 @@ void MDDS60_SendPacket(uint8_t addr, int8_t cmd)
  800199e:	46bd      	mov	sp, r7
  80019a0:	bd80      	pop	{r7, pc}
  80019a2:	bf00      	nop
- 80019a4:	2000026c 	.word	0x2000026c
+ 80019a4:	20000268 	.word	0x20000268
 
 080019a8 <_Z15MDDS60_Autobaudv>:
 
@@ -2675,7 +2675,7 @@ void MDDS60_Autobaud(void)
  80019d2:	46bd      	mov	sp, r7
  80019d4:	bd80      	pop	{r7, pc}
  80019d6:	bf00      	nop
- 80019d8:	2000026c 	.word	0x2000026c
+ 80019d8:	20000268 	.word	0x20000268
 
 080019dc <_Z14MDDS60_StopAllv>:
 
@@ -2861,7 +2861,7 @@ extern "C" int _write(int fd, char* ptr, int len) {
  8001aee:	3718      	adds	r7, #24
  8001af0:	46bd      	mov	sp, r7
  8001af2:	bd80      	pop	{r7, pc}
- 8001af4:	20000224 	.word	0x20000224
+ 8001af4:	20000220 	.word	0x20000220
 
 08001af8 <_Z7inv_kinfff>:
 
@@ -2921,7 +2921,7 @@ void inv_kin(float x, float y, float z){
  8001b72:	681b      	ldr	r3, [r3, #0]
  8001b74:	2b04      	cmp	r3, #4
  8001b76:	d139      	bne.n	8001bec <_Z7inv_kinfff+0xf4>
-		x=-x*0.69;
+		x=-x*0.80;
  8001b78:	edd7 7a03 	vldr	s15, [r7, #12]
  8001b7c:	eef1 7a67 	vneg.f32	s15, s15
  8001b80:	ee17 3a90 	vmov	r3, s15
@@ -2937,7 +2937,7 @@ void inv_kin(float x, float y, float z){
  8001b9c:	f7fe ff7e 	bl	8000a9c <__aeabi_d2f>
  8001ba0:	4603      	mov	r3, r0
  8001ba2:	60fb      	str	r3, [r7, #12]
-		y=-y*0.69;
+		y=-y*0.80;
  8001ba4:	edd7 7a02 	vldr	s15, [r7, #8]
  8001ba8:	eef1 7a67 	vneg.f32	s15, s15
  8001bac:	ee17 3a90 	vmov	r3, s15
@@ -2958,8 +2958,8 @@ void inv_kin(float x, float y, float z){
  8001bd4:	f3af 8000 	nop.w
  8001bd8:	66666666 	.word	0x66666666
  8001bdc:	3fd66666 	.word	0x3fd66666
- 8001be0:	e147ae14 	.word	0xe147ae14
- 8001be4:	3fe6147a 	.word	0x3fe6147a
+ 8001be0:	9999999a 	.word	0x9999999a
+ 8001be4:	3fe99999 	.word	0x3fe99999
  8001be8:	20000330 	.word	0x20000330
 	}
 	else{
@@ -3309,7 +3309,7 @@ void inv_kin(float x, float y, float z){
  8001f80:	20000310 	.word	0x20000310
  8001f84:	20000312 	.word	0x20000312
  8001f88:	20000314 	.word	0x20000314
- 8001f8c:	20000018 	.word	0x20000018
+ 8001f8c:	20000014 	.word	0x20000014
  8001f90:	4b43      	ldr	r3, [pc, #268]	@ (80020a0 <_Z7inv_kinfff+0x5a8>)
  8001f92:	801a      	strh	r2, [r3, #0]
 		vBR = (vBR / vMAX) * maxspeed;
@@ -3433,7 +3433,7 @@ void inv_kin(float x, float y, float z){
  80020a0:	2000030e 	.word	0x2000030e
  80020a4:	20000312 	.word	0x20000312
  80020a8:	20000314 	.word	0x20000314
- 80020ac:	20000018 	.word	0x20000018
+ 80020ac:	20000014 	.word	0x20000014
  80020b0:	2000030c 	.word	0x2000030c
  80020b4:	20000310 	.word	0x20000310
  80020b8:	20000364 	.word	0x20000364
@@ -3804,9 +3804,9 @@ void PowerWindowRotation(){
  8002386:	f002 f873 	bl	8004470 <HAL_GPIO_ReadPin>
  800238a:	4603      	mov	r3, r0
  800238c:	607b      	str	r3, [r7, #4]
-			if(bump!=1){
+			if(bump!=0){
  800238e:	687b      	ldr	r3, [r7, #4]
- 8002390:	2b01      	cmp	r3, #1
+ 8002390:	2b00      	cmp	r3, #0
  8002392:	d004      	beq.n	800239e <_Z19PowerWindowRotationv+0x32>
 				MDDS60_SendPacket(powerwindow, 20);
  8002394:	2114      	movs	r1, #20
@@ -3891,7 +3891,7 @@ void gripperRotation(){
  800241a:	bf00      	nop
  800241c:	bd80      	pop	{r7, pc}
  800241e:	bf00      	nop
- 8002420:	2000001a 	.word	0x2000001a
+ 8002420:	20000016 	.word	0x20000016
  8002424:	40020400 	.word	0x40020400
 
 08002428 <_Z10KFSPickingv>:
@@ -4047,7 +4047,7 @@ void KFShold(){
  8002512:	bf00      	nop
  8002514:	20000330 	.word	0x20000330
  8002518:	40010000 	.word	0x40010000
- 800251c:	2000001b 	.word	0x2000001b
+ 800251c:	20000017 	.word	0x20000017
  8002520:	08009ce0 	.word	0x08009ce0
  8002524:	2000035c 	.word	0x2000035c
  8002528:	08009cf0 	.word	0x08009cf0
@@ -4304,10 +4304,10 @@ void ServoControl()
  80026ae:	46bd      	mov	sp, r7
  80026b0:	bd80      	pop	{r7, pc}
  80026b2:	bf00      	nop
- 80026b4:	2000001d 	.word	0x2000001d
+ 80026b4:	20000019 	.word	0x20000019
  80026b8:	2000035a 	.word	0x2000035a
  80026bc:	b60b60b7 	.word	0xb60b60b7
- 80026c0:	2000014c 	.word	0x2000014c
+ 80026c0:	20000148 	.word	0x20000148
 
 080026c4 <_Z21process_button_eventsv>:
 
@@ -4456,13 +4456,13 @@ void process_button_events(void)
  80027a6:	88fb      	ldrh	r3, [r7, #6]
  80027a8:	f003 0304 	and.w	r3, r3, #4
  80027ac:	2b00      	cmp	r3, #0
- 80027ae:	d037      	beq.n	8002820 <_Z21process_button_eventsv+0x15c>
+ 80027ae:	d038      	beq.n	8002822 <_Z21process_button_eventsv+0x15e>
 			//printf("Triangle\r\n");
 			if(mode==1){
  80027b0:	4b42      	ldr	r3, [pc, #264]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
  80027b2:	681b      	ldr	r3, [r3, #0]
  80027b4:	2b01      	cmp	r3, #1
- 80027b6:	d115      	bne.n	80027e4 <_Z21process_button_eventsv+0x120>
+ 80027b6:	d116      	bne.n	80027e6 <_Z21process_button_eventsv+0x122>
 				target+=(sign*45);
  80027b8:	4b41      	ldr	r3, [pc, #260]	@ (80028c0 <_Z21process_button_eventsv+0x1fc>)
  80027ba:	681a      	ldr	r2, [r3, #0]
@@ -4476,160 +4476,159 @@ void process_button_events(void)
  80027ca:	4413      	add	r3, r2
  80027cc:	4a3d      	ldr	r2, [pc, #244]	@ (80028c4 <_Z21process_button_eventsv+0x200>)
  80027ce:	6013      	str	r3, [r2, #0]
-				P = 5;
+				P = 4;
  80027d0:	4b3d      	ldr	r3, [pc, #244]	@ (80028c8 <_Z21process_button_eventsv+0x204>)
- 80027d2:	4a3e      	ldr	r2, [pc, #248]	@ (80028cc <_Z21process_button_eventsv+0x208>)
- 80027d4:	601a      	str	r2, [r3, #0]
+ 80027d2:	f04f 4281 	mov.w	r2, #1082130432	@ 0x40800000
+ 80027d6:	601a      	str	r2, [r3, #0]
 				I = 0.0005;
- 80027d6:	4b3e      	ldr	r3, [pc, #248]	@ (80028d0 <_Z21process_button_eventsv+0x20c>)
- 80027d8:	4a43      	ldr	r2, [pc, #268]	@ (80028e8 <_Z21process_button_eventsv+0x224>)
- 80027da:	601a      	str	r2, [r3, #0]
-				D = 90;
- 80027dc:	4b3e      	ldr	r3, [pc, #248]	@ (80028d8 <_Z21process_button_eventsv+0x214>)
- 80027de:	4a46      	ldr	r2, [pc, #280]	@ (80028f8 <_Z21process_button_eventsv+0x234>)
- 80027e0:	601a      	str	r2, [r3, #0]
- 80027e2:	e01d      	b.n	8002820 <_Z21process_button_eventsv+0x15c>
+ 80027d8:	4b3d      	ldr	r3, [pc, #244]	@ (80028d0 <_Z21process_button_eventsv+0x20c>)
+ 80027da:	4a43      	ldr	r2, [pc, #268]	@ (80028e8 <_Z21process_button_eventsv+0x224>)
+ 80027dc:	601a      	str	r2, [r3, #0]
+				D = 75;
+ 80027de:	4b3e      	ldr	r3, [pc, #248]	@ (80028d8 <_Z21process_button_eventsv+0x214>)
+ 80027e0:	4a45      	ldr	r2, [pc, #276]	@ (80028f8 <_Z21process_button_eventsv+0x234>)
+ 80027e2:	601a      	str	r2, [r3, #0]
+ 80027e4:	e01d      	b.n	8002822 <_Z21process_button_eventsv+0x15e>
 			}
 
 			else if(mode==2){
- 80027e4:	4b35      	ldr	r3, [pc, #212]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
- 80027e6:	681b      	ldr	r3, [r3, #0]
- 80027e8:	2b02      	cmp	r3, #2
- 80027ea:	d10b      	bne.n	8002804 <_Z21process_button_eventsv+0x140>
+ 80027e6:	4b35      	ldr	r3, [pc, #212]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
+ 80027e8:	681b      	ldr	r3, [r3, #0]
+ 80027ea:	2b02      	cmp	r3, #2
+ 80027ec:	d10b      	bne.n	8002806 <_Z21process_button_eventsv+0x142>
 				servoflag = !servoflag;
- 80027ec:	4b43      	ldr	r3, [pc, #268]	@ (80028fc <_Z21process_button_eventsv+0x238>)
- 80027ee:	781b      	ldrb	r3, [r3, #0]
- 80027f0:	b2db      	uxtb	r3, r3
- 80027f2:	2b00      	cmp	r3, #0
- 80027f4:	bf0c      	ite	eq
- 80027f6:	2301      	moveq	r3, #1
- 80027f8:	2300      	movne	r3, #0
- 80027fa:	b2db      	uxtb	r3, r3
- 80027fc:	461a      	mov	r2, r3
- 80027fe:	4b3f      	ldr	r3, [pc, #252]	@ (80028fc <_Z21process_button_eventsv+0x238>)
- 8002800:	701a      	strb	r2, [r3, #0]
- 8002802:	e00d      	b.n	8002820 <_Z21process_button_eventsv+0x15c>
+ 80027ee:	4b43      	ldr	r3, [pc, #268]	@ (80028fc <_Z21process_button_eventsv+0x238>)
+ 80027f0:	781b      	ldrb	r3, [r3, #0]
+ 80027f2:	b2db      	uxtb	r3, r3
+ 80027f4:	2b00      	cmp	r3, #0
+ 80027f6:	bf0c      	ite	eq
+ 80027f8:	2301      	moveq	r3, #1
+ 80027fa:	2300      	movne	r3, #0
+ 80027fc:	b2db      	uxtb	r3, r3
+ 80027fe:	461a      	mov	r2, r3
+ 8002800:	4b3e      	ldr	r3, [pc, #248]	@ (80028fc <_Z21process_button_eventsv+0x238>)
+ 8002802:	701a      	strb	r2, [r3, #0]
+ 8002804:	e00d      	b.n	8002822 <_Z21process_button_eventsv+0x15e>
 			}
 			else if(mode==3){
- 8002804:	4b2d      	ldr	r3, [pc, #180]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
- 8002806:	681b      	ldr	r3, [r3, #0]
- 8002808:	2b03      	cmp	r3, #3
- 800280a:	d109      	bne.n	8002820 <_Z21process_button_eventsv+0x15c>
+ 8002806:	4b2d      	ldr	r3, [pc, #180]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
+ 8002808:	681b      	ldr	r3, [r3, #0]
+ 800280a:	2b03      	cmp	r3, #3
+ 800280c:	d109      	bne.n	8002822 <_Z21process_button_eventsv+0x15e>
 				kfsLeadscrewVertDown = !kfsLeadscrewVertDown;
- 800280c:	4b35      	ldr	r3, [pc, #212]	@ (80028e4 <_Z21process_button_eventsv+0x220>)
- 800280e:	781b      	ldrb	r3, [r3, #0]
- 8002810:	f083 0301 	eor.w	r3, r3, #1
- 8002814:	b2da      	uxtb	r2, r3
- 8002816:	4b33      	ldr	r3, [pc, #204]	@ (80028e4 <_Z21process_button_eventsv+0x220>)
- 8002818:	701a      	strb	r2, [r3, #0]
+ 800280e:	4b35      	ldr	r3, [pc, #212]	@ (80028e4 <_Z21process_button_eventsv+0x220>)
+ 8002810:	781b      	ldrb	r3, [r3, #0]
+ 8002812:	f083 0301 	eor.w	r3, r3, #1
+ 8002816:	b2da      	uxtb	r2, r3
+ 8002818:	4b32      	ldr	r3, [pc, #200]	@ (80028e4 <_Z21process_button_eventsv+0x220>)
+ 800281a:	701a      	strb	r2, [r3, #0]
 				kfsLeadscrewVertUp=false;
- 800281a:	4b31      	ldr	r3, [pc, #196]	@ (80028e0 <_Z21process_button_eventsv+0x21c>)
- 800281c:	2200      	movs	r2, #0
- 800281e:	701a      	strb	r2, [r3, #0]
+ 800281c:	4b30      	ldr	r3, [pc, #192]	@ (80028e0 <_Z21process_button_eventsv+0x21c>)
+ 800281e:	2200      	movs	r2, #0
+ 8002820:	701a      	strb	r2, [r3, #0]
 			}
 
 		}
 		if(evt & (1 << 3)){
- 8002820:	88fb      	ldrh	r3, [r7, #6]
- 8002822:	f003 0308 	and.w	r3, r3, #8
- 8002826:	2b00      	cmp	r3, #0
- 8002828:	d032      	beq.n	8002890 <_Z21process_button_eventsv+0x1cc>
+ 8002822:	88fb      	ldrh	r3, [r7, #6]
+ 8002824:	f003 0308 	and.w	r3, r3, #8
+ 8002828:	2b00      	cmp	r3, #0
+ 800282a:	d032      	beq.n	8002892 <_Z21process_button_eventsv+0x1ce>
 			//printf("Square\r\n");
 			if(mode==1){
- 800282a:	4b24      	ldr	r3, [pc, #144]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
- 800282c:	681b      	ldr	r3, [r3, #0]
- 800282e:	2b01      	cmp	r3, #1
- 8002830:	d114      	bne.n	800285c <_Z21process_button_eventsv+0x198>
+ 800282c:	4b23      	ldr	r3, [pc, #140]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
+ 800282e:	681b      	ldr	r3, [r3, #0]
+ 8002830:	2b01      	cmp	r3, #1
+ 8002832:	d114      	bne.n	800285e <_Z21process_button_eventsv+0x19a>
 				target+=(sign*5);
- 8002832:	4b23      	ldr	r3, [pc, #140]	@ (80028c0 <_Z21process_button_eventsv+0x1fc>)
- 8002834:	681a      	ldr	r2, [r3, #0]
- 8002836:	4613      	mov	r3, r2
- 8002838:	009b      	lsls	r3, r3, #2
- 800283a:	441a      	add	r2, r3
- 800283c:	4b21      	ldr	r3, [pc, #132]	@ (80028c4 <_Z21process_button_eventsv+0x200>)
- 800283e:	681b      	ldr	r3, [r3, #0]
- 8002840:	4413      	add	r3, r2
- 8002842:	4a20      	ldr	r2, [pc, #128]	@ (80028c4 <_Z21process_button_eventsv+0x200>)
- 8002844:	6013      	str	r3, [r2, #0]
+ 8002834:	4b22      	ldr	r3, [pc, #136]	@ (80028c0 <_Z21process_button_eventsv+0x1fc>)
+ 8002836:	681a      	ldr	r2, [r3, #0]
+ 8002838:	4613      	mov	r3, r2
+ 800283a:	009b      	lsls	r3, r3, #2
+ 800283c:	441a      	add	r2, r3
+ 800283e:	4b21      	ldr	r3, [pc, #132]	@ (80028c4 <_Z21process_button_eventsv+0x200>)
+ 8002840:	681b      	ldr	r3, [r3, #0]
+ 8002842:	4413      	add	r3, r2
+ 8002844:	4a1f      	ldr	r2, [pc, #124]	@ (80028c4 <_Z21process_button_eventsv+0x200>)
+ 8002846:	6013      	str	r3, [r2, #0]
 				P = 8;
- 8002846:	4b20      	ldr	r3, [pc, #128]	@ (80028c8 <_Z21process_button_eventsv+0x204>)
- 8002848:	f04f 4282 	mov.w	r2, #1090519040	@ 0x41000000
- 800284c:	601a      	str	r2, [r3, #0]
+ 8002848:	4b1f      	ldr	r3, [pc, #124]	@ (80028c8 <_Z21process_button_eventsv+0x204>)
+ 800284a:	f04f 4282 	mov.w	r2, #1090519040	@ 0x41000000
+ 800284e:	601a      	str	r2, [r3, #0]
 				I = 0.0005;
- 800284e:	4b20      	ldr	r3, [pc, #128]	@ (80028d0 <_Z21process_button_eventsv+0x20c>)
- 8002850:	4a25      	ldr	r2, [pc, #148]	@ (80028e8 <_Z21process_button_eventsv+0x224>)
- 8002852:	601a      	str	r2, [r3, #0]
+ 8002850:	4b1f      	ldr	r3, [pc, #124]	@ (80028d0 <_Z21process_button_eventsv+0x20c>)
+ 8002852:	4a25      	ldr	r2, [pc, #148]	@ (80028e8 <_Z21process_button_eventsv+0x224>)
+ 8002854:	601a      	str	r2, [r3, #0]
 				D = 50;
- 8002854:	4b20      	ldr	r3, [pc, #128]	@ (80028d8 <_Z21process_button_eventsv+0x214>)
- 8002856:	4a2a      	ldr	r2, [pc, #168]	@ (8002900 <_Z21process_button_eventsv+0x23c>)
- 8002858:	601a      	str	r2, [r3, #0]
- 800285a:	e019      	b.n	8002890 <_Z21process_button_eventsv+0x1cc>
+ 8002856:	4b20      	ldr	r3, [pc, #128]	@ (80028d8 <_Z21process_button_eventsv+0x214>)
+ 8002858:	4a29      	ldr	r2, [pc, #164]	@ (8002900 <_Z21process_button_eventsv+0x23c>)
+ 800285a:	601a      	str	r2, [r3, #0]
+ 800285c:	e019      	b.n	8002892 <_Z21process_button_eventsv+0x1ce>
 			}
 
 			else if(mode==2){
- 800285c:	4b17      	ldr	r3, [pc, #92]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
- 800285e:	681b      	ldr	r3, [r3, #0]
- 8002860:	2b02      	cmp	r3, #2
- 8002862:	d107      	bne.n	8002874 <_Z21process_button_eventsv+0x1b0>
+ 800285e:	4b17      	ldr	r3, [pc, #92]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
+ 8002860:	681b      	ldr	r3, [r3, #0]
+ 8002862:	2b02      	cmp	r3, #2
+ 8002864:	d107      	bne.n	8002876 <_Z21process_button_eventsv+0x1b2>
 				manualControl = !manualControl;
- 8002864:	4b27      	ldr	r3, [pc, #156]	@ (8002904 <_Z21process_button_eventsv+0x240>)
- 8002866:	781b      	ldrb	r3, [r3, #0]
- 8002868:	f083 0301 	eor.w	r3, r3, #1
- 800286c:	b2da      	uxtb	r2, r3
- 800286e:	4b25      	ldr	r3, [pc, #148]	@ (8002904 <_Z21process_button_eventsv+0x240>)
- 8002870:	701a      	strb	r2, [r3, #0]
- 8002872:	e00d      	b.n	8002890 <_Z21process_button_eventsv+0x1cc>
+ 8002866:	4b27      	ldr	r3, [pc, #156]	@ (8002904 <_Z21process_button_eventsv+0x240>)
+ 8002868:	781b      	ldrb	r3, [r3, #0]
+ 800286a:	f083 0301 	eor.w	r3, r3, #1
+ 800286e:	b2da      	uxtb	r2, r3
+ 8002870:	4b24      	ldr	r3, [pc, #144]	@ (8002904 <_Z21process_button_eventsv+0x240>)
+ 8002872:	701a      	strb	r2, [r3, #0]
+ 8002874:	e00d      	b.n	8002892 <_Z21process_button_eventsv+0x1ce>
 			}
 
 			else if(mode==3){
- 8002874:	4b11      	ldr	r3, [pc, #68]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
- 8002876:	681b      	ldr	r3, [r3, #0]
- 8002878:	2b03      	cmp	r3, #3
- 800287a:	d109      	bne.n	8002890 <_Z21process_button_eventsv+0x1cc>
+ 8002876:	4b11      	ldr	r3, [pc, #68]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
+ 8002878:	681b      	ldr	r3, [r3, #0]
+ 800287a:	2b03      	cmp	r3, #3
+ 800287c:	d109      	bne.n	8002892 <_Z21process_button_eventsv+0x1ce>
 				kfsLeadscrewHoriBW = !kfsLeadscrewHoriBW;
- 800287c:	4b1d      	ldr	r3, [pc, #116]	@ (80028f4 <_Z21process_button_eventsv+0x230>)
- 800287e:	781b      	ldrb	r3, [r3, #0]
- 8002880:	f083 0301 	eor.w	r3, r3, #1
- 8002884:	b2da      	uxtb	r2, r3
- 8002886:	4b1b      	ldr	r3, [pc, #108]	@ (80028f4 <_Z21process_button_eventsv+0x230>)
- 8002888:	701a      	strb	r2, [r3, #0]
+ 800287e:	4b1d      	ldr	r3, [pc, #116]	@ (80028f4 <_Z21process_button_eventsv+0x230>)
+ 8002880:	781b      	ldrb	r3, [r3, #0]
+ 8002882:	f083 0301 	eor.w	r3, r3, #1
+ 8002886:	b2da      	uxtb	r2, r3
+ 8002888:	4b1a      	ldr	r3, [pc, #104]	@ (80028f4 <_Z21process_button_eventsv+0x230>)
+ 800288a:	701a      	strb	r2, [r3, #0]
 				kfsLeadscrewHoriFW = false;
- 800288a:	4b19      	ldr	r3, [pc, #100]	@ (80028f0 <_Z21process_button_eventsv+0x22c>)
- 800288c:	2200      	movs	r2, #0
- 800288e:	701a      	strb	r2, [r3, #0]
+ 800288c:	4b18      	ldr	r3, [pc, #96]	@ (80028f0 <_Z21process_button_eventsv+0x22c>)
+ 800288e:	2200      	movs	r2, #0
+ 8002890:	701a      	strb	r2, [r3, #0]
 			}
 
 		}
 		if(evt & (1 << 4)){
- 8002890:	88fb      	ldrh	r3, [r7, #6]
- 8002892:	f003 0310 	and.w	r3, r3, #16
- 8002896:	2b00      	cmp	r3, #0
- 8002898:	d046      	beq.n	8002928 <_Z21process_button_eventsv+0x264>
+ 8002892:	88fb      	ldrh	r3, [r7, #6]
+ 8002894:	f003 0310 	and.w	r3, r3, #16
+ 8002898:	2b00      	cmp	r3, #0
+ 800289a:	d045      	beq.n	8002928 <_Z21process_button_eventsv+0x264>
 			//printf("L1\r\n");
 			if(mode==2){
- 800289a:	4b08      	ldr	r3, [pc, #32]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
- 800289c:	681b      	ldr	r3, [r3, #0]
- 800289e:	2b02      	cmp	r3, #2
- 80028a0:	d134      	bne.n	800290c <_Z21process_button_eventsv+0x248>
+ 800289c:	4b07      	ldr	r3, [pc, #28]	@ (80028bc <_Z21process_button_eventsv+0x1f8>)
+ 800289e:	681b      	ldr	r3, [r3, #0]
+ 80028a0:	2b02      	cmp	r3, #2
+ 80028a2:	d133      	bne.n	800290c <_Z21process_button_eventsv+0x248>
 				gripper =!gripper;
- 80028a2:	4b19      	ldr	r3, [pc, #100]	@ (8002908 <_Z21process_button_eventsv+0x244>)
- 80028a4:	781b      	ldrb	r3, [r3, #0]
- 80028a6:	f083 0301 	eor.w	r3, r3, #1
- 80028aa:	b2da      	uxtb	r2, r3
- 80028ac:	4b16      	ldr	r3, [pc, #88]	@ (8002908 <_Z21process_button_eventsv+0x244>)
- 80028ae:	701a      	strb	r2, [r3, #0]
- 80028b0:	e03a      	b.n	8002928 <_Z21process_button_eventsv+0x264>
- 80028b2:	bf00      	nop
+ 80028a4:	4b18      	ldr	r3, [pc, #96]	@ (8002908 <_Z21process_button_eventsv+0x244>)
+ 80028a6:	781b      	ldrb	r3, [r3, #0]
+ 80028a8:	f083 0301 	eor.w	r3, r3, #1
+ 80028ac:	b2da      	uxtb	r2, r3
+ 80028ae:	4b16      	ldr	r3, [pc, #88]	@ (8002908 <_Z21process_button_eventsv+0x244>)
+ 80028b0:	701a      	strb	r2, [r3, #0]
+ 80028b2:	e039      	b.n	8002928 <_Z21process_button_eventsv+0x264>
  80028b4:	20000351 	.word	0x20000351
  80028b8:	20000340 	.word	0x20000340
  80028bc:	20000330 	.word	0x20000330
  80028c0:	20000334 	.word	0x20000334
- 80028c4:	200002fc 	.word	0x200002fc
+ 80028c4:	200002f8 	.word	0x200002f8
  80028c8:	2000000c 	.word	0x2000000c
  80028cc:	40a00000 	.word	0x40a00000
- 80028d0:	20000010 	.word	0x20000010
+ 80028d0:	20000304 	.word	0x20000304
  80028d4:	3a378034 	.word	0x3a378034
- 80028d8:	20000014 	.word	0x20000014
+ 80028d8:	20000010 	.word	0x20000010
  80028dc:	42a00000 	.word	0x42a00000
  80028e0:	20000356 	.word	0x20000356
  80028e4:	20000357 	.word	0x20000357
@@ -4637,11 +4636,11 @@ void process_button_events(void)
  80028ec:	42f00000 	.word	0x42f00000
  80028f0:	20000358 	.word	0x20000358
  80028f4:	20000359 	.word	0x20000359
- 80028f8:	42b40000 	.word	0x42b40000
+ 80028f8:	42960000 	.word	0x42960000
  80028fc:	2000035a 	.word	0x2000035a
  8002900:	42480000 	.word	0x42480000
- 8002904:	2000001c 	.word	0x2000001c
- 8002908:	2000001a 	.word	0x2000001a
+ 8002904:	20000018 	.word	0x20000018
+ 8002908:	20000016 	.word	0x20000016
 			}
 
 			else if(mode==3){
@@ -4800,7 +4799,7 @@ void process_button_events(void)
  8002a08:	20000352 	.word	0x20000352
  8002a0c:	20000353 	.word	0x20000353
  8002a10:	20000334 	.word	0x20000334
- 8002a14:	2000001b 	.word	0x2000001b
+ 8002a14:	20000017 	.word	0x20000017
  8002a18:	20000351 	.word	0x20000351
  8002a1c:	20000350 	.word	0x20000350
 
@@ -5057,15 +5056,15 @@ int main(void)
  8002bb8:	20000374 	.word	0x20000374
  8002bbc:	08009d00 	.word	0x08009d00
  8002bc0:	20000316 	.word	0x20000316
- 8002bc4:	20000194 	.word	0x20000194
- 8002bc8:	200000b0 	.word	0x200000b0
+ 8002bc4:	20000190 	.word	0x20000190
+ 8002bc8:	200000ac 	.word	0x200000ac
  8002bcc:	08009d14 	.word	0x08009d14
- 8002bd0:	20000104 	.word	0x20000104
- 8002bd4:	2000014c 	.word	0x2000014c
+ 8002bd0:	20000100 	.word	0x20000100
+ 8002bd4:	20000148 	.word	0x20000148
  8002bd8:	20000330 	.word	0x20000330
  8002bdc:	2000033c 	.word	0x2000033c
  8002be0:	20000338 	.word	0x20000338
- 8002be4:	2000001c 	.word	0x2000001c
+ 8002be4:	20000018 	.word	0x20000018
  8002be8:	20000360 	.word	0x20000360
  8002bec:	ffff32ec 	.word	0xffff32ec
  8002bf0:	08009d2c 	.word	0x08009d2c
@@ -5292,7 +5291,7 @@ static void MX_I2C1_Init(void)
  8002d36:	bf00      	nop
  8002d38:	bd80      	pop	{r7, pc}
  8002d3a:	bf00      	nop
- 8002d3c:	200000b0 	.word	0x200000b0
+ 8002d3c:	200000ac 	.word	0x200000ac
  8002d40:	40005400 	.word	0x40005400
  8002d44:	00061a80 	.word	0x00061a80
 
@@ -5545,7 +5544,7 @@ static void MX_TIM1_Init(void)
  8002ece:	3748      	adds	r7, #72	@ 0x48
  8002ed0:	46bd      	mov	sp, r7
  8002ed2:	bd80      	pop	{r7, pc}
- 8002ed4:	20000104 	.word	0x20000104
+ 8002ed4:	20000100 	.word	0x20000100
  8002ed8:	40010000 	.word	0x40010000
 
 08002edc <_ZL12MX_TIM2_Initv>:
@@ -5729,7 +5728,7 @@ static void MX_TIM2_Init(void)
  8002ff2:	46bd      	mov	sp, r7
  8002ff4:	bd80      	pop	{r7, pc}
  8002ff6:	bf00      	nop
- 8002ff8:	2000014c 	.word	0x2000014c
+ 8002ff8:	20000148 	.word	0x20000148
 
 08002ffc <_ZL13MX_UART4_Initv>:
   * @brief UART4 Initialization Function
@@ -5799,7 +5798,7 @@ static void MX_UART4_Init(void)
 }
  800304c:	bf00      	nop
  800304e:	bd80      	pop	{r7, pc}
- 8003050:	20000194 	.word	0x20000194
+ 8003050:	20000190 	.word	0x20000190
  8003054:	40004c00 	.word	0x40004c00
 
 08003058 <_ZL19MX_USART1_UART_Initv>:
@@ -5870,7 +5869,7 @@ static void MX_USART1_UART_Init(void)
 }
  80030a8:	bf00      	nop
  80030aa:	bd80      	pop	{r7, pc}
- 80030ac:	200001dc 	.word	0x200001dc
+ 80030ac:	200001d8 	.word	0x200001d8
  80030b0:	40011000 	.word	0x40011000
 
 080030b4 <_ZL19MX_USART2_UART_Initv>:
@@ -5941,7 +5940,7 @@ static void MX_USART2_UART_Init(void)
 }
  8003104:	bf00      	nop
  8003106:	bd80      	pop	{r7, pc}
- 8003108:	20000224 	.word	0x20000224
+ 8003108:	20000220 	.word	0x20000220
  800310c:	40004400 	.word	0x40004400
 
 08003110 <_ZL19MX_USART3_UART_Initv>:
@@ -6012,7 +6011,7 @@ static void MX_USART3_UART_Init(void)
 }
  8003160:	bf00      	nop
  8003162:	bd80      	pop	{r7, pc}
- 8003164:	2000026c 	.word	0x2000026c
+ 8003164:	20000268 	.word	0x20000268
  8003168:	40004800 	.word	0x40004800
 
 0800316c <_ZL19MX_USART6_UART_Initv>:
@@ -6083,7 +6082,7 @@ static void MX_USART6_UART_Init(void)
 }
  80031bc:	bf00      	nop
  80031be:	bd80      	pop	{r7, pc}
- 80031c0:	200002b4 	.word	0x200002b4
+ 80031c0:	200002b0 	.word	0x200002b0
  80031c4:	40011400 	.word	0x40011400
 
 080031c8 <_ZL12MX_GPIO_Initv>:
@@ -6314,9 +6313,9 @@ stm32RoboClaw motor2(&huart6,100);
 }
  800331c:	bf00      	nop
  800331e:	bd80      	pop	{r7, pc}
- 8003320:	200001dc 	.word	0x200001dc
+ 8003320:	200001d8 	.word	0x200001d8
  8003324:	20000364 	.word	0x20000364
- 8003328:	200002b4 	.word	0x200002b4
+ 8003328:	200002b0 	.word	0x200002b0
  800332c:	20000374 	.word	0x20000374
 
 08003330 <_Z41__static_initialization_and_destruction_1v>:
@@ -7303,7 +7302,7 @@ void UART4_IRQHandler(void)
  800388e:	bf00      	nop
  8003890:	bd80      	pop	{r7, pc}
  8003892:	bf00      	nop
- 8003894:	20000194 	.word	0x20000194
+ 8003894:	20000190 	.word	0x20000190
 
 08003898 <_ZN13stm32RoboClawC1EP20__UART_HandleTypeDefm>:
 
@@ -8073,11 +8072,11 @@ LoopFillZerobss:
   ldr r0, =_sdata
  8003cbc:	20000000 	.word	0x20000000
   ldr r1, =_edata
- 8003cc0:	20000088 	.word	0x20000088
+ 8003cc0:	20000084 	.word	0x20000084
   ldr r2, =_sidata
  8003cc4:	0800a184 	.word	0x0800a184
   ldr r2, =_sbss
- 8003cc8:	20000088 	.word	0x20000088
+ 8003cc8:	20000084 	.word	0x20000084
   ldr r4, =_ebss
  8003ccc:	200004d8 	.word	0x200004d8
 
@@ -8213,9 +8212,9 @@ __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
  8003d66:	3708      	adds	r7, #8
  8003d68:	46bd      	mov	sp, r7
  8003d6a:	bd80      	pop	{r7, pc}
- 8003d6c:	20000020 	.word	0x20000020
- 8003d70:	20000028 	.word	0x20000028
- 8003d74:	20000024 	.word	0x20000024
+ 8003d6c:	2000001c 	.word	0x2000001c
+ 8003d70:	20000024 	.word	0x20000024
+ 8003d74:	20000020 	.word	0x20000020
 
 08003d78 <HAL_IncTick>:
  * @note This function is declared as __weak to be overwritten in case of other 
@@ -8241,7 +8240,7 @@ __weak void HAL_IncTick(void)
  8003d90:	f85d 7b04 	ldr.w	r7, [sp], #4
  8003d94:	4770      	bx	lr
  8003d96:	bf00      	nop
- 8003d98:	20000028 	.word	0x20000028
+ 8003d98:	20000024 	.word	0x20000024
  8003d9c:	20000388 	.word	0x20000388
 
 08003da0 <HAL_GetTick>:
@@ -8315,7 +8314,7 @@ __weak void HAL_Delay(uint32_t Delay)
  8003df6:	46bd      	mov	sp, r7
  8003df8:	bd80      	pop	{r7, pc}
  8003dfa:	bf00      	nop
- 8003dfc:	20000028 	.word	0x20000028
+ 8003dfc:	20000024 	.word	0x20000024
 
 08003e00 <__NVIC_SetPriorityGrouping>:
            In case of a conflict between priority grouping and available
@@ -12646,8 +12645,8 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
  8005718:	40023c00 	.word	0x40023c00
  800571c:	40023800 	.word	0x40023800
  8005720:	08009d50 	.word	0x08009d50
- 8005724:	20000020 	.word	0x20000020
- 8005728:	20000024 	.word	0x20000024
+ 8005724:	2000001c 	.word	0x2000001c
+ 8005728:	20000020 	.word	0x20000020
 
 0800572c <HAL_RCC_GetHCLKFreq>:
   * @note   The SystemCoreClock CMSIS variable is used to store System Clock Frequency
@@ -12667,7 +12666,7 @@ uint32_t HAL_RCC_GetHCLKFreq(void)
  8005738:	f85d 7b04 	ldr.w	r7, [sp], #4
  800573c:	4770      	bx	lr
  800573e:	bf00      	nop
- 8005740:	20000020 	.word	0x20000020
+ 8005740:	2000001c 	.word	0x2000001c
 
 08005744 <HAL_RCC_GetPCLK1Freq>:
   * @note   Each time PCLK1 changes, this function must be called to update the
@@ -20212,7 +20211,7 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  8008b3c:	6818      	ldr	r0, [r3, #0]
  8008b3e:	f000 bb47 	b.w	80091d0 <_free_r>
  8008b42:	bf00      	nop
- 8008b44:	20000038 	.word	0x20000038
+ 8008b44:	20000034 	.word	0x20000034
 
 08008b48 <sbrk_aligned>:
  8008b48:	b570      	push	{r4, r5, r6, lr}
@@ -20416,9 +20415,9 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  8008d14:	4803      	ldr	r0, [pc, #12]	@ (8008d24 <stdio_exit_handler+0x14>)
  8008d16:	f000 b869 	b.w	8008dec <_fwalk_sglue>
  8008d1a:	bf00      	nop
- 8008d1c:	2000002c 	.word	0x2000002c
+ 8008d1c:	20000028 	.word	0x20000028
  8008d20:	08009909 	.word	0x08009909
- 8008d24:	2000003c 	.word	0x2000003c
+ 8008d24:	20000038 	.word	0x20000038
 
 08008d28 <cleanup_stdio>:
  8008d28:	6841      	ldr	r1, [r0, #4]
@@ -20543,7 +20542,7 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  8008e40:	f85d eb04 	ldr.w	lr, [sp], #4
  8008e44:	b004      	add	sp, #16
  8008e46:	4770      	bx	lr
- 8008e48:	20000038 	.word	0x20000038
+ 8008e48:	20000034 	.word	0x20000034
 
 08008e4c <_puts_r>:
  8008e4c:	6a03      	ldr	r3, [r0, #32]
@@ -20631,7 +20630,7 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  8008efc:	6818      	ldr	r0, [r3, #0]
  8008efe:	f7ff bfa5 	b.w	8008e4c <_puts_r>
  8008f02:	bf00      	nop
- 8008f04:	20000038 	.word	0x20000038
+ 8008f04:	20000034 	.word	0x20000034
 
 08008f08 <__sread>:
  8008f08:	b510      	push	{r4, lr}
@@ -20823,7 +20822,7 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  80090ae:	e7f4      	b.n	800909a <__swsetup_r+0x8e>
  80090b0:	2000      	movs	r0, #0
  80090b2:	e7f7      	b.n	80090a4 <__swsetup_r+0x98>
- 80090b4:	20000038 	.word	0x20000038
+ 80090b4:	20000034 	.word	0x20000034
 
 080090b8 <memset>:
  80090b8:	4402      	add	r2, r0
@@ -20925,7 +20924,7 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  8009176:	6818      	ldr	r0, [r3, #0]
  8009178:	4770      	bx	lr
  800917a:	bf00      	nop
- 800917c:	20000038 	.word	0x20000038
+ 800917c:	20000034 	.word	0x20000034
 
 08009180 <__libc_init_array>:
  8009180:	b570      	push	{r4, r5, r6, lr}
