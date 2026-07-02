@@ -1,0 +1,15 @@
+../Core/Src/stm32roboclaw.cpp:11:1:stm32RoboClaw::stm32RoboClaw(UART_HandleTypeDef*, uint32_t)	1
+../Core/Src/stm32roboclaw.cpp:17:1:stm32RoboClaw::~stm32RoboClaw()	1
+../Core/Src/stm32roboclaw.cpp:17:1:virtual stm32RoboClaw::~stm32RoboClaw()	1
+../Core/Src/stm32roboclaw.cpp:21:6:bool stm32RoboClaw::DutyM1(uint8_t, int16_t)	1
+../Core/Src/stm32roboclaw.cpp:26:6:bool stm32RoboClaw::DutyM2(uint8_t, int16_t)	1
+../Core/Src/stm32roboclaw.cpp:31:6:void stm32RoboClaw::crc_clear()	1
+../Core/Src/stm32roboclaw.cpp:36:6:void stm32RoboClaw::crc_update(uint8_t)	3
+../Core/Src/stm32roboclaw.cpp:49:10:uint16_t stm32RoboClaw::crc_get()	1
+../Core/Src/stm32roboclaw.cpp:54:6:)	2
+../Core/Src/stm32roboclaw.cpp:77:6:)	9
+../Core/Src/stm32roboclaw.cpp:154:8:virtual size_t stm32RoboClaw::write(uint8_t)	1
+../Core/Src/stm32roboclaw.cpp:160:6:bool stm32RoboClaw::overflow()	1
+../Core/Src/stm32roboclaw.cpp:165:5:virtual int stm32RoboClaw::read()	2
+../Core/Src/stm32roboclaw.cpp:174:6:virtual void stm32RoboClaw::flush()	1
+../Core/Src/stm32roboclaw.cpp:179:6:void stm32RoboClaw::clear()	1

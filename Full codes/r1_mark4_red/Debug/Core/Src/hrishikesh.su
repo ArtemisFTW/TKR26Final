@@ -1,0 +1,2 @@
+../Core/Src/hrishikesh.cpp:3:6:long int map(long int, long int, long int, long int, long int)	24	static
+../Core/Src/hrishikesh.cpp:8:6:long int constrain(long int, long int, long int)	24	static
