@@ -15,34 +15,34 @@
 ../Core/Src/main.cpp:319:6:void print_pots()	1
 ../Core/Src/main.cpp:325:16:int _write(int, char*, int)	4
 ../Core/Src/main.cpp:341:6:void inv_kin(float, float, float)	4
-../Core/Src/main.cpp:388:6:void motor_test()	1
-../Core/Src/main.cpp:395:6:void PotDeadzone()	9
-../Core/Src/main.cpp:403:6:void ModeSet()	5
-../Core/Src/main.cpp:422:6:void FOD(float, float*, float*)	1
-../Core/Src/main.cpp:433:6:void colorSet(int)	5
-../Core/Src/main.cpp:461:6:void StaffPickingLeadscrew()	4
-../Core/Src/main.cpp:475:6:void PowerWindowRotation()	5
-../Core/Src/main.cpp:502:6:void gripperRotation()	2
-../Core/Src/main.cpp:513:6:void KFSPicking()	4
-../Core/Src/main.cpp:533:6:void KFShold()	5
-../Core/Src/main.cpp:562:6:void KFSLeadscrewVert()	4
-../Core/Src/main.cpp:579:6:void KFSLeadscrewHori()	5
-../Core/Src/main.cpp:602:6:void StaffPickingLeadscrewPID()	2
-../Core/Src/main.cpp:614:6:void ServoControl()	5
-../Core/Src/main.cpp:650:6:void process_button_events()	28
-../Core/Src/main.cpp:780:5:int main()	3
-../Core/Src/main.cpp:899:6:void SystemClock_Config()	3
-../Core/Src/main.cpp:947:13:void MX_I2C1_Init()	2
-../Core/Src/main.cpp:981:13:void MX_TIM1_Init()	8
-../Core/Src/main.cpp:1058:13:void MX_TIM2_Init()	6
-../Core/Src/main.cpp:1117:13:void MX_UART4_Init()	2
-../Core/Src/main.cpp:1150:13:void MX_USART1_UART_Init()	2
-../Core/Src/main.cpp:1183:13:void MX_USART2_UART_Init()	2
-../Core/Src/main.cpp:1216:13:void MX_USART3_UART_Init()	2
-../Core/Src/main.cpp:1249:13:void MX_USART6_UART_Init()	2
-../Core/Src/main.cpp:1282:13:void MX_GPIO_Init()	1
-../Core/Src/main.cpp:1351:6:void Error_Handler()	1
-../Core/Src/main.cpp:1360:1:void __static_initialization_and_destruction_0()	1
-../Core/Src/main.cpp:1360:1:void __static_initialization_and_destruction_1()	1
-../Core/Src/main.cpp:1360:1:cpp)	1
-../Core/Src/main.cpp:1360:1:cpp)	1
+../Core/Src/main.cpp:390:6:void motor_test()	1
+../Core/Src/main.cpp:397:6:void PotDeadzone()	9
+../Core/Src/main.cpp:405:6:void ModeSet()	5
+../Core/Src/main.cpp:424:6:void FOD(float, float*, float*)	1
+../Core/Src/main.cpp:435:6:void colorSet(int)	5
+../Core/Src/main.cpp:463:6:void StaffPickingLeadscrew()	4
+../Core/Src/main.cpp:477:6:void PowerWindowRotation()	5
+../Core/Src/main.cpp:504:6:void gripperRotation()	2
+../Core/Src/main.cpp:515:6:void KFSPicking()	4
+../Core/Src/main.cpp:535:6:void KFShold()	5
+../Core/Src/main.cpp:564:6:void KFSLeadscrewVert()	4
+../Core/Src/main.cpp:581:6:void KFSLeadscrewHori()	5
+../Core/Src/main.cpp:604:6:void StaffPickingLeadscrewPID()	2
+../Core/Src/main.cpp:616:6:void ServoControl()	5
+../Core/Src/main.cpp:652:6:void process_button_events()	28
+../Core/Src/main.cpp:782:5:int main()	3
+../Core/Src/main.cpp:901:6:void SystemClock_Config()	3
+../Core/Src/main.cpp:949:13:void MX_I2C1_Init()	2
+../Core/Src/main.cpp:983:13:void MX_TIM1_Init()	8
+../Core/Src/main.cpp:1060:13:void MX_TIM2_Init()	6
+../Core/Src/main.cpp:1119:13:void MX_UART4_Init()	2
+../Core/Src/main.cpp:1152:13:void MX_USART1_UART_Init()	2
+../Core/Src/main.cpp:1185:13:void MX_USART2_UART_Init()	2
+../Core/Src/main.cpp:1218:13:void MX_USART3_UART_Init()	2
+../Core/Src/main.cpp:1251:13:void MX_USART6_UART_Init()	2
+../Core/Src/main.cpp:1284:13:void MX_GPIO_Init()	1
+../Core/Src/main.cpp:1353:6:void Error_Handler()	1
+../Core/Src/main.cpp:1362:1:void __static_initialization_and_destruction_0()	1
+../Core/Src/main.cpp:1362:1:void __static_initialization_and_destruction_1()	1
+../Core/Src/main.cpp:1362:1:cpp)	1
+../Core/Src/main.cpp:1362:1:cpp)	1

@@ -85,7 +85,7 @@ float error= 0;
 float preverror=0;
 float P=10;
 float I=0;
-float D=50;
+float D=30;
 float intg;
 
 int16_t vFL, vFR, vBL, vBR;
@@ -349,7 +349,7 @@ void inv_kin(float x, float y, float z){
 		y=-y*0.80;
 	}
 	else{
-		x=-x*0.5;
+		x=-x*0;
 		y=-y*0.5;
 	}
 
@@ -383,6 +383,8 @@ void inv_kin(float x, float y, float z){
 	motor.DutyM2(129, vFL);
 	motor2.DutyM1(129, vBL);
 	motor2.DutyM2(129, -vBR);
+
+	printf("VFL:%.2f\tVFR:%.2f\tVBL:%.2f\tVBR:%.2f\r\n",vFL,vFR,vBL,vBR);
 }
 
 void motor_test(void){
@@ -815,9 +817,9 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   printf("STM32 initializing\r\n");
-  	//	HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_SET);
-  	//	HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
-  	//	HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_SET);
+  		HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_SET);
+  		HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
+  		HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_SET);
 
   	HAL_NVIC_SetPriority(UART4_IRQn, 0, 0);
   	HAL_NVIC_EnableIRQ(UART4_IRQn);
@@ -831,9 +833,9 @@ int main(void)
 
   	HAL_Delay(1000);
   	printf("Stm32 setup complete\r\n");
-  	//	HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);
-  	//	HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
-  	//	HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_RESET);
+  		HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);
+  		HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
+  		HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_RESET);
 
   	MDDS60_Autobaud();
   	MDDS60_StopAll();
@@ -861,7 +863,7 @@ int main(void)
 	  		float v = bno055_getHeadingContinuous();
 	  		//printf("%.2f\r\n",v);
 	  		FOD(v,&driveLX,&driveLY);
-	  		inv_kin(driveLX, driveLY, PID(v));
+	  		inv_kin(0, driveLY, PID(v));
 	  		//printf("%.2f,-8,8\r\n",v);
 
 	  		if(manualControl){
@@ -884,7 +886,7 @@ int main(void)
 	  		KFSLeadscrewHori();
 	  		ServoControl();
 
-	  		printf("%d\r\n",StaffencoderCount);
+	  		//printf("%d\r\n",StaffencoderCount);
 	  /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
