@@ -29,20 +29,20 @@
 ../Core/Src/main.cpp:580:6:void KFSLeadscrewHori()	5
 ../Core/Src/main.cpp:603:6:void StaffPickingLeadscrewPID()	2
 ../Core/Src/main.cpp:615:6:void ServoControl()	5
-../Core/Src/main.cpp:651:6:void process_button_events()	28
-../Core/Src/main.cpp:781:5:int main()	3
-../Core/Src/main.cpp:903:6:void SystemClock_Config()	3
-../Core/Src/main.cpp:951:13:void MX_I2C1_Init()	2
-../Core/Src/main.cpp:985:13:void MX_TIM1_Init()	8
-../Core/Src/main.cpp:1062:13:void MX_TIM2_Init()	6
-../Core/Src/main.cpp:1121:13:void MX_UART4_Init()	2
-../Core/Src/main.cpp:1154:13:void MX_USART1_UART_Init()	2
-../Core/Src/main.cpp:1187:13:void MX_USART2_UART_Init()	2
-../Core/Src/main.cpp:1220:13:void MX_USART3_UART_Init()	2
-../Core/Src/main.cpp:1253:13:void MX_USART6_UART_Init()	2
-../Core/Src/main.cpp:1286:13:void MX_GPIO_Init()	1
-../Core/Src/main.cpp:1355:6:void Error_Handler()	1
-../Core/Src/main.cpp:1364:1:void __static_initialization_and_destruction_0()	1
-../Core/Src/main.cpp:1364:1:void __static_initialization_and_destruction_1()	1
-../Core/Src/main.cpp:1364:1:cpp)	1
-../Core/Src/main.cpp:1364:1:cpp)	1
+../Core/Src/main.cpp:651:6:void process_button_events()	26
+../Core/Src/main.cpp:767:5:int main()	3
+../Core/Src/main.cpp:889:6:void SystemClock_Config()	3
+../Core/Src/main.cpp:937:13:void MX_I2C1_Init()	2
+../Core/Src/main.cpp:971:13:void MX_TIM1_Init()	8
+../Core/Src/main.cpp:1048:13:void MX_TIM2_Init()	6
+../Core/Src/main.cpp:1107:13:void MX_UART4_Init()	2
+../Core/Src/main.cpp:1140:13:void MX_USART1_UART_Init()	2
+../Core/Src/main.cpp:1173:13:void MX_USART2_UART_Init()	2
+../Core/Src/main.cpp:1206:13:void MX_USART3_UART_Init()	2
+../Core/Src/main.cpp:1239:13:void MX_USART6_UART_Init()	2
+../Core/Src/main.cpp:1272:13:void MX_GPIO_Init()	1
+../Core/Src/main.cpp:1341:6:void Error_Handler()	1
+../Core/Src/main.cpp:1350:1:void __static_initialization_and_destruction_0()	1
+../Core/Src/main.cpp:1350:1:void __static_initialization_and_destruction_1()	1
+../Core/Src/main.cpp:1350:1:cpp)	1
+../Core/Src/main.cpp:1350:1:cpp)	1

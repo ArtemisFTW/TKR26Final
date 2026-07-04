@@ -85,7 +85,7 @@ float error= 0;
 float preverror=0;
 float P=8;
 float I=0.0005;
-float D=70;
+float D=60;
 float intg;
 
 int16_t vFL, vFR, vBL, vBR;
@@ -520,7 +520,7 @@ void KFSPicking(){
 		}
 		else if(kfsexit){
 			//printf("exit\r\n");
-			TIM1->CCR3 = 6000;
+			TIM1->CCR3 = 15000;
 			TIM1->CCR4 = 0;
 		}
 		else{
@@ -581,16 +581,16 @@ void KFSLeadscrewHori(){
 	if(mode==3){
 		if(kfsLeadscrewHoriBW){
 			//printf("Lead back\r\n");
-			MDDS60_SendPacket(KFShorizontal, 70);
+			MDDS60_SendPacket(KFShorizontal, 30);
 		}
 		else if(kfsLeadscrewHoriFW){
 			//printf("Lead forw\r\n");
 			int bump1 = HAL_GPIO_ReadPin(BUMP1_GPIO_Port, BUMP1_Pin);
-			if(bump1== 1){
+			if(bump1== 0){
 				MDDS60_SendPacket(KFShorizontal, 0);
 			}
 			else{
-				MDDS60_SendPacket(KFShorizontal, -70);
+				MDDS60_SendPacket(KFShorizontal, -30);
 			}
 		}
 		else{
@@ -616,7 +616,7 @@ void ServoControl()
 {
 	if(lastServoState != servoflag){
 
-		if(servoflag){   // Move 0 -> 90
+		if(servoflag == false){   // Move 0 -> 90
 			for(int angle = 0; angle <= 100; angle++){
 				uint16_t pulse = 500 + (angle * 2000 / 180);
 
@@ -657,14 +657,7 @@ void process_button_events(void)
 
 		if(evt & (1 << 0)){
 			//printf("Cross\r\n");
-			if(mode==1){
-				target+=(sign*180);
-				P = 5;
-				I = 0.0007;
-				D = 80;
-			}
-
-			else if(mode==3){
+			if(mode==3){
 				kfsLeadscrewVertUp = !kfsLeadscrewVertUp;
 				kfsLeadscrewVertDown=false;
 			}
@@ -672,15 +665,8 @@ void process_button_events(void)
 		}
 
 		if(evt & (1 << 1)){
-			//printf("Circle\r\n");
-			if(mode==1){
-				target+=(sign*90);
-				P = 1.5;
-				I = 0.0005;
-				D = 120;
-			}
-
-			else if(mode==3){
+			//printf("Circle\r\n");}
+			if(mode==3){
 				kfsLeadscrewHoriFW = !kfsLeadscrewHoriFW;
 				kfsLeadscrewHoriBW = false;
 			}
@@ -689,10 +675,10 @@ void process_button_events(void)
 		if(evt & (1 << 2)){
 			//printf("Triangle\r\n");
 			if(mode==1){
-				target+=(sign*45);
-				P = 4;
-				I = 0.0005;
-				D = 75;
+				target+=(sign*90);
+				P = 3;
+				I = 0.0007;
+				D = 100;
 			}
 
 			else if(mode==2){
@@ -710,7 +696,7 @@ void process_button_events(void)
 				target+=(sign*5);
 				P = 8;
 				I = 0.0005;
-				D = 50;
+				D = 60;
 			}
 
 			else if(mode==2){
@@ -860,7 +846,7 @@ int main(void)
 		//		//print_pots();
 		//
 		float v = bno055_getHeadingContinuous();
-		printf("%.2f\r\n",v);
+		//printf("%.2f\r\n",v);
 		FOD(v,&driveLX,&driveLY);
 		inv_kin(driveLX, driveLY, PID(v));
 		//printf("VFL:%d\tVFR:%d\tVBL:%d\tVBR:%d\r\n",vFL,vFR,vBL,vBR);
@@ -871,7 +857,7 @@ int main(void)
 		}
 		else{
 			//StaffPickingLeadscrewPID();
-			if(StaffencoderCount>=-98900){
+			if(StaffencoderCount>=-83000){
 				MDDS60_SendPacket(leadscrew, -70);
 			}
 			else{
@@ -886,7 +872,7 @@ int main(void)
 		KFSLeadscrewHori();
 		ServoControl();
 
-		//printf("%d\r\n",StaffencoderCount);
+		printf("%d\r\n",StaffencoderCount);
 
 
 		/* USER CODE END WHILE */
