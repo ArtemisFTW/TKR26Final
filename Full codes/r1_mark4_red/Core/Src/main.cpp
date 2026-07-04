@@ -516,11 +516,11 @@ void KFSPicking(){
 		if(kfsintake){
 			//printf("intake\r\n");
 			TIM1->CCR3 = 0;
-			TIM1->CCR4 = 32767;
+			TIM1->CCR4 = 20000;
 		}
 		else if(kfsexit){
 			//printf("exit\r\n");
-			TIM1->CCR3 = 15000;
+			TIM1->CCR3 = 8000;
 			TIM1->CCR4 = 0;
 		}
 		else{
@@ -537,24 +537,24 @@ void KFShold(){
 		TIM1->CCR2 = 0;
 		if(kfshold){
 			printf("open position\r\n");
-			if(KFSencoderCount<-13){
-				TIM1->CCR1 = 15000;
+			if(KFSencoderCount<-16){
+				TIM1->CCR1 = 10000;
 				TIM1->CCR2= 0;
-			}
-			//			else{
-			//				TIM1->CCR1 = 0;
-			//				TIM1->CCR2 = 0;
-			//			}
-		}
-		else{
-			printf("close position\r\n");
-			if(KFSencoderCount>-50){
-				TIM1->CCR1 = 0;
-				TIM1->CCR2= 15000;
 			}
 			else{
 				TIM1->CCR1 = 0;
-				TIM1->CCR2 = 900;
+				TIM1->CCR2 = 0;
+			}
+		}
+		else{
+			printf("close position\r\n");
+			if(KFSencoderCount>-45){
+				TIM1->CCR1 = 0;
+				TIM1->CCR2= 10000;
+			}
+			else{
+				TIM1->CCR1 = 0;
+				TIM1->CCR2 = 500;
 			}
 		}
 	}
@@ -857,7 +857,7 @@ int main(void)
 		}
 		else{
 			//StaffPickingLeadscrewPID();
-			if(StaffencoderCount>=-83000){
+			if(StaffencoderCount>=-75000){
 				MDDS60_SendPacket(leadscrew, -70);
 			}
 			else{
